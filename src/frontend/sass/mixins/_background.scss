@@ -1,0 +1,19 @@
+@mixin background($background) {
+  background-color: $background;
+}
+
+@mixin backgroundDarken($background) {
+  background: darken($background, 2%);
+}
+
+@mixin backgroundLighten($background) {
+  background: lighten($background, 2%);
+}
+
+@mixin backgroundThin($background) {
+  background: rgba($background, 0.8);
+}
+
+@mixin backgroundThinner($background) {
+  background: rgba($background, 0.5);
+}

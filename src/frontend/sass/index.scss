@@ -1,1 +1,14 @@
-@import './utils/global.scss';
+@import './utils/variables';
+
+@import './mixins/shadow';
+@import './mixins/background';
+@import './mixins/border';
+@import './mixins/button';
+@import './mixins/form';
+@import './mixins/text';
+
+@import './utils/global';
+@import './utils/border';
+@import './utils/display';
+@import './utils/image';
+@import './utils/text';

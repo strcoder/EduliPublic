@@ -1,0 +1,52 @@
+@each $name, $size in $font-headers {
+  @if (type-of($size) == 'number') {
+    #{$name} {
+      font-size: $size;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headers;
+  & .badge {
+    font-weight: 500;
+    font-size: $font-size-xs;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $tertiary-color;
+}
+
+.single-line {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text {
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}

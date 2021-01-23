@@ -1,0 +1,299 @@
+//* Generic colors *//
+$red: #a91e2c;
+$teal: #0056b3;
+$cyan: #17a2b8;
+$blue: #0056b3;
+$pink: #e83e8c;
+$green: #18634b;
+$white: #ffffff;
+$black: #111111;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$orange: #c44c04;
+$yellow: #f0b400;
+
+//* Shades of grey *//
+$gray-100: #ffffff;
+$gray-200: #fafbfe;
+$gray-300: #fafafb;
+$gray-400: #e6e7e8;
+$gray-500: #b7c3d2;
+$gray-600: #93a5be;
+$gray-700: #52547a;
+$gray-800: #4e5079;
+$gray-900: #424767;
+
+//* Color scheme: Light *//
+$light-bg: #f4f7f9;
+$primary-color: #042454;
+$secondary-color: #02132d;
+$tertiary-color: #0056b3;
+$acent-color: #5c046c;
+$success-color: #1c7414;
+$warning-color: #fcc408;
+$danger-color: #8c0404;
+$dark-color: #041721;
+$gray-color: #313840;
+$soft-color: #f9f9f9;
+$light-color: #f4f4f4;
+$disable-color: #93a5be;
+
+//* Color scheme: Dark *//
+$dark-bg: #282828;
+$primary-color: #042454;
+$secondary-color: #02132d;
+$tertiary-color: #0056b3;
+$acent-color: #5c046c;
+$success-color: #1c7414;
+$warning-color: #fcc408;
+$danger-color: #8c0404;
+$dark-color: #041721;
+$gray-color: #313840;
+$light-color: #f4f4f4;
+$soft-color: #f9f9f9;
+$disable-color: #93a5be;
+
+//* Brand colors *//
+$facebook: #3b5999;
+$twitter: #1da1f2;
+$google: #db4337;
+$pinterest: #8c0615;
+$youtube: #a11918;
+$github: #090909;
+$twitch: #4b367c;
+$linkedin: #048abf;
+$paypal: #033e8c;
+$instagram: #d6249f;
+$dribbble: #ea4c89;
+$slack: #611f69;
+$paypal-back: linear-gradient(
+  150deg,
+  rgba(4, 138, 191, 1) 0%,
+  rgba(3, 103, 166, 1) 30%,
+  rgba(3, 90, 166, 1) 70%,
+  rgba(3, 62, 140, 1) 100%
+);
+$instagram-back: radial-gradient(
+  circle at 30% 130%,
+  #fdf497 0%,
+  #fdf497 5%,
+  #fd5949 45%,
+  #d6249f 60%,
+  #285aeb 90%
+);
+
+//* Theme colors *//
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'tertiary': $tertiary-color,
+    'acent': $acent-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'danger': $danger-color,
+    'dark': $dark-color,
+    'gray': $gray-color,
+    'disable': $disable-color,
+    'light': $light-color,
+    'soft': $soft-color,
+    'blue': #0056b3,
+    'indigo': #6610f2,
+    'purple': #6f42c1,
+    'pink': #e83e8c,
+    'red': #a91e2c,
+    'orange': #fd7e14,
+    'yellow': #f0b400,
+    'green': #18634b,
+    'teal': #0056b3,
+    'cyan': #17a2b8,
+    'black': $black,
+    'white': $white,
+    'neutral': $white,
+    'facebook': $facebook,
+    'twitter': $twitter,
+    'google': $google,
+    'pinterest': $pinterest,
+    'youtube': $youtube,
+    'github': $github,
+    'twitch': $twitch,
+    'linkedin': $linkedin,
+    'paypal': $paypal,
+    'instagram': $instagram,
+    'dribbble': $dribbble,
+    'slack': $slack,
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+  ),
+  $theme-colors
+);
+
+$grays: ();
+$grays: map-merge(
+  (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+  ),
+  $grays
+);
+
+$brand-colors: ();
+$brand-colors: map-merge(
+  (
+    'facebook': $facebook,
+    'twitter': $twitter,
+    'google': $google,
+    'pinterest': $pinterest,
+    'youtube': $youtube,
+    'github': $github,
+    'twitch': $twitch,
+    'linkedin': $linkedin,
+    'paypal': $paypal,
+    'instagram': $instagram,
+    'dribbble': $dribbble,
+    'slack': $slack,
+  ),
+  $brand-colors
+);
+
+//* Body *//
+$body-bg: $white;
+$body-color: $gray-900;
+
+//* Shadows *//
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+
+//* Sections *//
+$section-colors: ();
+$section-colors: map-merge(
+  (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'gray': $gray-400,
+    'white': $white,
+    'dark': $dark,
+    'black': $black,
+  ),
+  $section-colors
+);
+
+//* Components *//
+$border-width: 0.0625rem;
+$border-width-md: 0.125rem;
+$border-width-lg: 0.25rem;
+$border-width-xl: 0.375rem;
+$border-color-white: $white;
+$border-color: $light-color;
+$border-radius: 0.45rem;
+$border-radius-xl: 1.275rem;
+$border-radius-lg: 0.3rem;
+$border-radius-md: 0.2rem;
+$border-radius-sm: 0.1rem;
+$border-radius-pill: 2rem;
+$circle-radius: 50%;
+$organic-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+
+// * Transitions *//
+$transition-theme: all 0.5s ease;
+$transition-base: all 0.2s ease;
+$transition-transform: transform 0.2s ease;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+$transition-tabs: all 0.2s;
+
+//* Fonts *//
+$font-family-base: 'Mulish', sans-serif;
+$font-family-headers: 'Montserrat', sans-serif;
+$font-size-base: 1rem;
+$font-size-xxl: ($font-size-base * 2);
+$font-size-xl: ($font-size-base * 1.5);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-md: ($font-size-base * 1);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-xs: ($font-size-base * 0.75);
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$font-weight: (
+  'light': $font-weight-light,
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold,
+  'bolder': $font-weight-bolder,
+);
+
+$font-size: (
+  'base': $font-size-base,
+  'xxl': $font-size-xxl,
+  'xl': $font-size-xl,
+  'lg': $font-size-lg,
+  'md': $font-size-md,
+  'sm': $font-size-sm,
+  'xs': $font-size-xs,
+);
+
+$font-headers: (
+  'h1': $h1-font-size,
+  'h2': $h2-font-size,
+  'h3': $h3-font-size,
+  'h4': $h4-font-size,
+  'h5': $h5-font-size,
+  'h6': $h6-font-size,
+);
+
+//* Screen breackpoints *//
+$breakpoints-width: (
+  'xxl': 2560px,
+  'xl': 1920px,
+  'lg': 1440px,
+  'md': 1024px,
+  'sm': 768px,
+  'xs': 425px,
+  'xxs': 320px,
+);
+
+//* btn *//
+$btn-size: (
+  'xl': 18px,
+  'lg': 16px,
+  'md': 14px,
+  'sm': 12px,
+  'xs': 10px,
+);
+
+//* Icon *//
+$icon-box-padding: 1rem;
+$icon-shape: 4.5rem;
+$icon-shape-sm: 3rem;
+$icon-shape-lg: 6rem;
+$icon-shape-img: 6rem;
+$icon-shape-bordered: 5rem;
+$icon-size: 2.5rem;
+$icon-size-xs: 1.25rem;
+$icon-size-sm: 1.5rem;
+$icon-size-md: 2rem;
+$icon-size-lg: 2.5rem;
+$icon-size-xl: 3rem;
