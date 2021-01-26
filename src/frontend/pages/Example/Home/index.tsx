@@ -1,6 +1,6 @@
 import React from 'react';
-import Buttons from '../../components/Example/Buttons';
-import CardsExample from '../../components/Example/Cards';
+import Buttons from '../../../components/Example/Buttons';
+import CardsExample from '../../../components/Example/Cards';
 import './styles.scss';
 
 const Home = () => {

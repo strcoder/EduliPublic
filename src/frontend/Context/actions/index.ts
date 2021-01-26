@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ThemeProps } from '../models/actions';
+import { ThemeProps } from '../../models/Context/actions';
 
 export const setTheme = async ({ id, role, theme, dispatch }: ThemeProps) => {
   if (id) {

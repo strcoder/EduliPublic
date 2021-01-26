@@ -5,14 +5,10 @@ import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
-import { renderRoutes } from 'react-router-config';
-import fs from 'fs';
-import util from 'util';
 import { ENV, PORT } from './config';
 import { Provider } from '../frontend/Context';
-import Layout from '../frontend/container/Layout';
 import { preloadState } from './model/preloadState';
-import serverRoutes from '../frontend/routes/serverRoutes';
+import ServerApp from '../frontend/routes/ServerApp';
 
 const app = express();
 
@@ -52,7 +48,7 @@ const setResponse = (html: string, preloadedState: preloadState) => {
 };
 
 const renderApp = async (req: express.Request, res: express.Response) => {
-  const { theme } = req.cookies;
+  const { theme, role } = req.cookies;
   const initialState: preloadState = {
     theme: theme || 'light',
   };
@@ -60,9 +56,7 @@ const renderApp = async (req: express.Request, res: express.Response) => {
   const html = renderToString(
     <Provider initialState={initialState}>
       <StaticRouter location={req.url} context={{}}>
-        <Layout>
-          {renderRoutes(serverRoutes())}
-        </Layout>
+        <ServerApp role={role} />
       </StaticRouter>
     </Provider>,
   );

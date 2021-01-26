@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { createContext, useReducer, useContext } from 'react';
-import reducer from '../reducers';
-import { ContextProps, ProviderProps } from '../models/context';
+import { ContextProps, ProviderProps } from '../models/Context';
+import reducer from './reducers';
 
 export const Context = createContext<ContextProps>({
   theme: '',

@@ -1,4 +1,5 @@
 import { Dispatch } from 'react';
+import { User } from './users';
 
 type Actions = {
   type: string,
@@ -12,5 +13,6 @@ export type ProviderProps = {
 
 export type ContextProps = {
   theme: string,
+  user?: User,
   dispatch: Dispatch<Actions>,
 }

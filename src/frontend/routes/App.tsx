@@ -1,12 +1,12 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import Layout from '../container/Layout';
 import { useStateValue } from '../Context';
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
+import RoutesManager from './Manager/routes';
+import RoutesStudent from './Student/routes';
+import RoutesTeacher from './Teacher/routes';
+import RoutesUnregistered from './Unregistered/routes';
 
 const App = () => {
-  const { theme } = useStateValue();
+  const { theme, user } = useStateValue();
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     document.cookie = `theme=${theme}`;
     const body = document.body.classList;
@@ -14,14 +14,20 @@ const App = () => {
     theme === 'dark' ? body.remove('light') : body.add(theme);
   }
   return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route component={NotFound} />
-        </Switch>
-      </Layout>
-    </BrowserRouter>
+    <>
+      {user?.role === 'manager' && (
+        <RoutesManager />
+      )}
+      {user?.role === 'teacher' && (
+        <RoutesTeacher />
+      )}
+      {user?.role === 'student' && (
+        <RoutesStudent />
+      )}
+      {!user?.role && (
+        <RoutesUnregistered />
+      )}
+    </>
   );
 };
 

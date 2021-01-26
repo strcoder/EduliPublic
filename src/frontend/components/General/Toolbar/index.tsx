@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { setTheme } from '../../../actions';
+import { setTheme } from '../../../Context/actions';
 import { useStateValue } from '../../../Context';
 import './styles.scss';
 
