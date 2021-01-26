@@ -1,0 +1,32 @@
+@import '../../../sass/utils/variables';
+
+.Cards {
+  padding: 100px 0;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Card {
+  gap: 20px;
+  padding: 25px;
+  border-radius: $border-radius;
+  text-align: center;
+  transition: $transition-theme;
+}
+
+.Card__header {
+  justify-items: center;
+}
+
+.Card__body {
+  justify-items: center;
+  gap: 10px;
+}
+
+.Card__footer {
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  & > button {
+    width: 125px;
+  }
+}

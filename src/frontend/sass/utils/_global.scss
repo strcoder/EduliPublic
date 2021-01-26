@@ -7,12 +7,281 @@
 body {
   transition: $transition-theme;
   font-family: $font-family-base;
-  &.light {
-    color: $dark;
-    background: $light-background;
-  }
-  &.dark {
-    color: $soft-color;
-    background: $dark-background;
+  @each $name, $color in $shades-grey {
+    &.light .light__bg-#{$name}, &.dark .dark__bg-#{$name}, .bg-#{$name} {
+      background-color: $color;
+    }
+    &.light .light__text-#{$name}, &.dark .dark__text-#{$name}, .text-#{$name} {
+      color: $color;
+    }
+    &.light .light__btn-#{$name}, &.dark .dark__btn-#{$name}, .btn-#{$name} {
+      @include button($dark-color, $color);
+    }
+    &.light .light__btn-link-#{$name}, &.dark .dark__btn-link-#{$name}, .btn-link-#{$name} {
+      @include buttonLink($color);
+    }
+    &.light .light__btn-outline-#{$name}, &.dark .dark__btn-outline-#{$name}, .btn-outline-#{$name} {
+      @include buttonOutline($color, $dark-color);
+    }
   }
 }
+
+body.light {
+  color: $dark-color;
+  background: $light-bg;
+  & .light__text-base, .text-base {
+    color: $dark-color;
+  }
+  & .light__bg-base, .bg-base {
+    background-color: $white;
+  }
+  @each $name, $color in $theme-light {
+    & .light__bg-#{$name},
+    .bg-#{$name} {
+      background-color: $color;
+    }
+    & .light__text-#{$name}, .text-#{$name} {
+      color: $color;
+    }
+    & .light__btn-#{$name}, .btn-#{$name} {
+      @include button($soft-color, $color);
+    }
+    & .light__btn-link-#{$name}, .btn-link-#{$name} {
+      @include buttonLink($color);
+    }
+    & .light__btn-outline-#{$name}, .btn-outline-#{$name} {
+      @include buttonOutline($color, $soft-color);
+    }
+  }
+}
+
+body.dark {
+  color: $soft-color;
+  background: $dark-bg;
+  & .dark__text-base, .text-base {
+    color: $soft-color;
+  }
+  & .dark__bg-base, .bg-base {
+    background-color: lighten($black, 7%);
+  }
+  @each $name, $color in $theme-dark {
+    & .dark__bg-#{$name},
+    .bg-#{$name} {
+      background-color: $color;
+    }
+    & .dark__text-#{$name}, .text-#{$name} {
+      color: $color;
+    }
+    & .dark__btn-#{$name}, .btn-#{$name} {
+      @include button($soft-color, $color);
+    }
+    & .dark__btn-link-#{$name}, .btn-link-#{$name} {
+      @include buttonLink($color);
+    }
+    & .dark__btn-outline-#{$name}, .btn-outline-#{$name} {
+      @include buttonOutline($color, $soft-color);
+    }
+  }
+}
+
+// .btn,
+// .btn-primary,
+// .btn-secondary,
+// .btn-tertiary,
+// .btn-success,
+// .btn-warning,
+// .btn-danger,
+// .btn-gray,
+// .btn-dark,
+// .btn-white,
+// .btn-soft,
+// .btn-disable,
+
+// .light__btn,
+// .light__btn-primary,
+// .light__btn-secondary,
+// .light__btn-tertiary,
+// .light__btn-success,
+// .light__btn-warning,
+// .light__btn-danger,
+// .light__btn-gray,
+// .light__btn-dark,
+// .light__btn-white,
+// .light__btn-soft,
+// .light__btn-disable,
+
+// .dark__btn,
+// .dark__btn-primary,
+// .dark__btn-secondary,
+// .dark__btn-tertiary,
+// .dark__btn-success,
+// .dark__btn-warning,
+// .dark__btn-danger,
+// .dark__btn-gray,
+// .dark__btn-dark,
+// .dark__btn-white,
+// .dark__btn-soft,
+// .dark__btn-disable,
+
+// .btn-outline,
+// .btn-outline-primary,
+// .btn-outline-secondary,
+// .btn-outline-tertiary,
+// .btn-outline-success,
+// .btn-outline-warning,
+// .btn-outline-danger,
+// .btn-outline-gray,
+// .btn-outline-dark,
+// .btn-outline-white,
+// .btn-outline-soft,
+// .btn-outline-disable,
+
+// .light__btn-outline,
+// .light__btn-outline-primary,
+// .light__btn-outline-secondary,
+// .light__btn-outline-tertiary,
+// .light__btn-outline-success,
+// .light__btn-outline-warning,
+// .light__btn-outline-danger,
+// .light__btn-outline-gray,
+// .light__btn-outline-dark,
+// .light__btn-outline-white,
+// .light__btn-outline-soft,
+// .light__btn-outline-disable,
+
+// .dark__btn-outline,
+// .dark__btn-outline-primary,
+// .dark__btn-outline-secondary,
+// .dark__btn-outline-tertiary,
+// .dark__btn-outline-success,
+// .dark__btn-outline-warning,
+// .dark__btn-outline-danger,
+// .dark__btn-outline-gray,
+// .dark__btn-outline-dark,
+// .dark__btn-outline-white,
+// .dark__btn-outline-soft,
+// .dark__btn-outline-disable,
+
+// .btn-link,
+// .btn-link-primary,
+// .btn-link-secondary,
+// .btn-link-tertiary,
+// .btn-link-success,
+// .btn-link-warning,
+// .btn-link-danger,
+// .btn-link-dark,
+// .btn-link-gray,
+// .btn-link-white,
+// .btn-link-soft,
+// .btn-link-disable,
+
+// .light__btn-link,
+// .light__btn-link-primary,
+// .light__btn-link-secondary,
+// .light__btn-link-tertiary,
+// .light__btn-link-success,
+// .light__btn-link-warning,
+// .light__btn-link-danger,
+// .light__btn-link-dark,
+// .light__btn-link-gray,
+// .light__btn-link-white,
+// .light__btn-link-soft,
+// .light__btn-link-disable,
+
+// .dark__btn-link,
+// .dark__btn-link-primary,
+// .dark__btn-link-secondary,
+// .dark__btn-link-tertiary,
+// .dark__btn-link-success,
+// .dark__btn-link-warning,
+// .dark__btn-link-danger,
+// .dark__btn-link-dark,
+// .dark__btn-link-gray,
+// .dark__btn-link-white,
+// .dark__btn-link-soft,
+// .dark__btn-link-disable,
+
+// .btn-pill {
+//   border: none;
+//   cursor: pointer;
+//   font-weight: 600;
+//   padding: 10px 14px;
+//   text-align: center;
+//   align-self: center;
+//   align-items: center;
+//   justify-self: center;
+//   justify-content: center;
+//   text-transform: capitalize;
+//   font-size: $font-size-base;
+//   font-family: $font-family-base;
+//   border-radius: $border-radius-lg;
+//   transition: $transition-transform;
+//   &:hover {
+//     transform: translateY(-2px);
+//   }
+// }
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  border-radius: $border-radius-lg;
+  transition: $transition-transform;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn {
+  @include button();
+}
+
+.btn-link {
+  @include buttonLink();
+}
+
+.btn-outline {
+  @include buttonOutline();
+}
+
+// @each $name, $color in $colors-light-bg {
+//   .btn-#{$name}.light { @include button($soft-color, $color); }
+// }
+// @each $name, $color in $dark-bg-colors {
+//   .btn-#{$name}.dark { @include button($soft-color, $color); }
+// }
+// @each $name, $color in $colors-dark-bg {
+//   .btn-#{$name}.light { @include button($dark-color, $color); }
+//   .btn-#{$name}.dark { @include button($dark-color, $color); }
+// }
+
+// @each $name, $color in $colors-light-bg {
+//   .btn-link-#{$name}.light { @include buttonLink($color); }
+// }
+// @each $name, $color in $dark-bg-colors {
+//   .btn-link-#{$name}.dark { @include buttonLink($color); }
+// }
+// @each $name, $color in $colors-dark-bg {
+//   .btn-link-#{$name}.light { @include buttonLink($color); }
+//   .btn-link-#{$name}.dark { @include buttonLink($color); }
+// }
+
+// @each $name, $color in $colors-light-bg {
+//   .btn-outline-#{$name}.light { @include buttonOutline($color, $soft-color, $color); }
+// }
+// @each $name, $color in $dark-bg-colors {
+//   .btn-outline-#{$name}.dark { @include buttonOutline($color, $soft-color, $color); }
+// }
+// @each $name, $color in $colors-dark-bg {
+//   .btn-outline-#{$name}.light { @include buttonOutline($color, $dark-color, $color); }
+//   .btn-outline-#{$name}.dark { @include buttonOutline($color, $dark-color, $color); }
+// }

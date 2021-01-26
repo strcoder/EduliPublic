@@ -1,14 +1,18 @@
-import express from 'express';
-import helmet from 'helmet';
-import cookieParser from 'cookie-parser';
-import passport from 'passport';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import helmet from 'helmet';
+import express from 'express';
+import passport from 'passport';
+import cookieParser from 'cookie-parser';
 import { StaticRouter } from 'react-router-dom';
+import { renderToString } from 'react-dom/server';
 import { renderRoutes } from 'react-router-config';
-import Layout from '../frontend/container/Layout';
-import serverRoutes from '../frontend/routes/serverRoutes';
+import fs from 'fs';
+import util from 'util';
 import { ENV, PORT } from './config';
+import { Provider } from '../frontend/Context';
+import Layout from '../frontend/container/Layout';
+import { preloadState } from './model/preloadState';
+import serverRoutes from '../frontend/routes/serverRoutes';
 
 const app = express();
 
@@ -16,15 +20,17 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
+
 app.use(helmet());
 app.use(helmet.permittedCrossDomainPolicies());
 app.disable('x-powered-by');
 
-const setResponse = (html: string) => {
-  return `<!DOCTYPE html>
+const setResponse = (html: string, preloadedState: preloadState) => {
+  return (
+    `<!DOCTYPE html>
     <html lang="es">
       <head>
-        <base href="/">
+        <base href="/" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,21 +39,36 @@ const setResponse = (html: string) => {
         <link rel="stylesheet" type="text/css" href="app.css" />
         <title>Eduli</title>
       </head>
-      <body>
+      <body class=${JSON.stringify(preloadedState.theme).replace(/</g, '\\u003c')}>
         <div id="app">${html}</div>
         <div id="modal"></div>
+        <script type="text/javascript" id="preloadedState">
+          window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')};
+        </script>
         <script type="text/javascript" src="app.js"></script>
       </body>
-    </html>`;
+    </html>`
+  );
 };
 
 const renderApp = async (req: express.Request, res: express.Response) => {
+  const { theme } = req.cookies;
+  const initialState: preloadState = {
+    theme: theme || 'light',
+  };
+
   const html = renderToString(
-    <StaticRouter location={req.url} context={{}}>
-      <Layout>{renderRoutes(serverRoutes())}</Layout>
-    </StaticRouter>,
+    <Provider initialState={initialState}>
+      <StaticRouter location={req.url} context={{}}>
+        <Layout>
+          {renderRoutes(serverRoutes())}
+        </Layout>
+      </StaticRouter>
+    </Provider>,
   );
-  res.send(setResponse(html));
+  res
+    .set('Content-Security-Policy', "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'")
+    .send(setResponse(html, initialState));
 };
 
 app.use(express.static(`${__dirname}/public`));

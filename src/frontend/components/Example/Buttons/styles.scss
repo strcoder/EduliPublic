@@ -1,0 +1,9 @@
+.ExampleButtons {
+  justify-content: center;
+  gap: 50px;
+}
+
+.Buttons, .ButtonsOutline, .ButtonsLink {
+  gap: 20px;
+  grid-template-columns: repeat(10, 1fr);
+}

@@ -4,7 +4,6 @@
   @include shadow($background);
   @if (type-of($background) == 'color') {
     &:hover {
-      transform: translateY(-2px);
       background-color: darken($background, 2%);
     }
   }
@@ -15,12 +14,11 @@
   border-radius: $border-radius-pill;
 }
 
-@mixin buttonOutline($color, $background) {
+@mixin buttonOutline($color: $primary-color, $background: $soft-color) {
   color: $color;
   background: none;
   border: 1px solid $color;
   &:hover {
-    transform: translateY(-2px);
     color: $background;
     background-color: $color;
   }
@@ -29,10 +27,7 @@
 @mixin buttonLink($color: $primary-color) {
   color: $color;
   border: none;
-  background-color: none;
-  &:hover {
-    transform: translateY(-2px);
-  }
+  background: none;
 }
 
 @mixin buttonSocial($color) {
