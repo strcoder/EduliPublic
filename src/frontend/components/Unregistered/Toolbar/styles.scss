@@ -8,7 +8,8 @@
   display: flex;
   position: fixed;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 10px 0 35px;
   transition: $transition-theme;
   &.light {
     background-color: $primary-color;
@@ -22,9 +23,106 @@
 
 .Toolbar__nav--logo {
   width: 80px;
+  transition: $transition-base;
 }
 
-.Toolbar__actions > .divider {
+.Toolbar__actions {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.Toolbar__actions a {
+  font-size: $font-size-sm;
+  border-radius: $border-radius-md;
+  padding: 6px 8px;
+}
+
+.ToolbarOpenNav {
+  display: none;
+  transition: $transition-base;
+  & figure {
+    animation-duration: 1s;
+  }
+}
+
+.Toolbar__links {
+  display: none;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  transition: $transition-theme;
+  &.light {
+    background-color: $primary-color;
+  }
+  &.dark {
+    background-color: $tertiary-color;
+  }
+}
+
+.Toolbar__actions--theme {
+  display: none;
+}
+
+.Toolbar__actions--theme button {
+  font-size: $font-size-sm;
+}
+
+.Toolbar__actions--theme > .divider {
   margin: 10px 0;
   border: 1px solid $soft-color;
+}
+
+.Toolbar__links a figure {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .Toolbar__actions {
+    column-gap: 10px;
+    grid-template-columns: repeat(3, auto);
+  }
+  .Toolbar__actions--theme {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Toolbar {
+    height: 80px;
+    padding: 0 5%;
+  }
+  .Toolbar__nav--logo {
+    width: 120px;
+  }
+  .Toolbar__actions {
+    column-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+  }
+  .Toolbar__actions a {
+    padding: 10px 14px;
+    width: 130px;
+    font-size: $font-size-base;
+    border-radius: $border-radius;
+  }
+  .ToolbarOpenNav {
+    display: flex;
+  }
+  .Toolbar__actions--theme button {
+    font-size: $font-size-base;
+  }
+  .Toolbar__links {
+    display: grid;
+    animation-duration: 1s;
+    grid-template-columns: repeat(11, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .Toolbar__links a span {
+    padding-right: 10px;
+  }
+  .Toolbar__links a figure {
+    display: flex;
+  }
 }

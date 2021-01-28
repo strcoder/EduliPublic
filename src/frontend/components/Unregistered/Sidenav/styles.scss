@@ -111,3 +111,15 @@
   margin: 10px 0;
   border: 1px solid $soft-color;
 }
+
+@media screen and (min-width: 500px) {
+  .Sidenav__theme {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .SidenavOpen {
+    display: none;
+  }
+}

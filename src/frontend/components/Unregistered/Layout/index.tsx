@@ -5,8 +5,8 @@ import Toolbar from '../Toolbar';
 const Layout = ({ children }: any) => {
   return (
     <>
-      <Toolbar />
       <Sidenav />
+      <Toolbar />
       <>{children}</>
     </>
   );
