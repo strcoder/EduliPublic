@@ -21,6 +21,10 @@
   }
 }
 
+.Toolbar__nav {
+  animation-duration: $animate-duration;
+}
+
 .Toolbar__nav--logo {
   width: 80px;
   transition: $transition-base;

@@ -24,6 +24,7 @@ const Sidenav = () => {
       <button
         type='button'
         className='SidenavOpen btn-link-soft bounceIn'
+        title='Open Sidenav'
         onClick={() => setActive(!active)}
       >
         <HiMenuAlt1 size={25} />

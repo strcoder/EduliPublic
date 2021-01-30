@@ -121,3 +121,11 @@ button, a {
 .box-shadow {
   box-shadow: $box-shadow;
 }
+
+.form {
+  @include formBasic();
+}
+
+.form-search {
+  @include formSearch();
+}

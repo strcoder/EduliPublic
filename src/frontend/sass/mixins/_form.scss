@@ -8,16 +8,20 @@
 }
 
 @mixin formSearch {
-  display: flex;
-  & > label {
-    display: flex;
+  & > .form-label {
+    display: grid;
+    row-gap: 10px;
     align-items: center;
+    grid-template-columns: 1fr auto;
+    & .form-title {
+      grid-column-end: span 2;
+    }
   }
-  & > label input {
+  & .form-input {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  & button {
+  & .form-button {
     box-shadow: none;
     justify-self: left;
     border-top-left-radius: 0;
@@ -83,22 +87,22 @@
   }
 }
 
-@mixin formBasicDark {
-  &-input,
-  &-textarea,
-  &-input[type='date'] {
-    color: $soft-color;
-    background: $gray-color;
-  }
-  &-input::placeholder,
-  &-textarea::placeholder,
-  &-input[type='date']::placeholder {
-    color: $gray-300;
-  }
-  &-select.background-none {
-    color: $soft-color;
-  }
-  &-select:active {
-    background: $dark;
-  }
-}
+// @mixin formBasicDark {
+//   &-input,
+//   &-textarea,
+//   &-input[type='date'] {
+//     color: $soft-color;
+//     background: $gray-color;
+//   }
+//   &-input::placeholder,
+//   &-textarea::placeholder,
+//   &-input[type='date']::placeholder {
+//     color: $gray-300;
+//   }
+//   &-select.background-none {
+//     color: $soft-color;
+//   }
+//   &-select:active {
+//     background: $dark;
+//   }
+// }

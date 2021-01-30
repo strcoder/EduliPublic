@@ -11,7 +11,7 @@ const Toolbar = () => {
   const [navActive, setNavActive] = useState(false);
   return (
     <header className={`Toolbar ${theme}`}>
-      <nav className='Toolbar__nav'>
+      <nav className='Toolbar__nav fadeIn'>
         <Link to='/' className='Toolbar__nav--logo'>
           <img src='/logo.png' alt='Eduli-Logotipo' />
         </Link>
@@ -48,14 +48,19 @@ const Toolbar = () => {
         >
           Iniciar Sesión
         </Link>
-        <button type='button' className='ToolbarOpenNav btn-link-soft bounceIn' onClick={() => setNavActive(!navActive)}>
+        <button
+          type='button'
+          title='Open nav'
+          className='ToolbarOpenNav btn-link-soft bounceIn'
+          onClick={() => setNavActive(!navActive)}
+        >
           {navActive && (
             <figure className='bounceIn'>
               <FaTimes size={30} />
             </figure>
           )}
           {!navActive && (
-            <figure className='bounceIn'>
+            <figure className='bounceIn' aria-hidden='true'>
               <HiMenuAlt1 size={30} />
             </figure>
           )}
