@@ -1,0 +1,28 @@
+@import '../../../sass/utils/variables';
+
+.SchoolTypeCard {
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  flex-wrap: wrap;
+  border-radius: 0;
+  color: $primary-color;
+  justify-items: center;
+  transition: $transition-theme;
+  animation-duration: $animate-duration;
+  // border: $border-width solid $border-color;
+}
+
+.SchoolTypeCard.bg-base:hover {
+  color: $white;
+  background-color: $primary-color;
+}
+
+@media screen and (min-width: 1440px) {
+  .SchoolTypeCard {
+    width: 180px;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+  }
+}

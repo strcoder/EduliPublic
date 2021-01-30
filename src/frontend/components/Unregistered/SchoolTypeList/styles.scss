@@ -1,0 +1,22 @@
+.SchoolTypeList {
+  grid-template-columns: repeat(2, 1fr);
+  // gap: 10px;
+}
+
+@media screen and (min-width: 425px) {
+  .SchoolTypeList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .SchoolTypeList {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .SchoolTypeList {
+    padding: 50px 25px;
+  }
+}

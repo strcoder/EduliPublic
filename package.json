@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^9.1.1",
+    "@types/react-loadable": "^5.5.4",
     "axios": "^0.21.1",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
@@ -39,6 +40,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.14.2",
     "react-icons": "^4.1.0",
+    "react-loadable": "^5.5.0",
     "react-router": "^5.2.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0"

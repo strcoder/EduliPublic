@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '../../../components/Unregistered/Hero';
+import SchoolList from '../../../components/Unregistered/SchoolList';
+import SchoolTypeList from '../../../components/Unregistered/SchoolTypeList';
 import './styles.scss';
 
 const Home = () => {
@@ -12,6 +14,8 @@ const Home = () => {
         <meta name='description' content='Plataforma de educación en linea' />
       </Helmet>
       <Hero />
+      <SchoolTypeList />
+      <SchoolList />
     </>
   );
 };

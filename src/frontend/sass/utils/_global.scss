@@ -36,6 +36,9 @@ body.light {
   & .light__bg-base, .bg-base {
     background-color: $white;
   }
+  & .light__border-base, .border-base {
+    border: $border-width solid $border-color;
+  }
   @each $name, $color in $theme-light {
     & .light__bg-#{$name},
     .bg-#{$name} {
@@ -64,6 +67,9 @@ body.dark {
   }
   & .dark__bg-base, .bg-base {
     background-color: lighten($black, 7%);
+  }
+  & .dark__border-base, .border-base {
+    border: $border-width solid lighten($black, 5%);
   }
   @each $name, $color in $theme-dark {
     & .dark__bg-#{$name},

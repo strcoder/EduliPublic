@@ -1,0 +1,30 @@
+.SchoolList {
+  gap: 25px;
+  justify-items: center;
+  padding: 50px 0;
+}
+
+.SchoolList--items {
+  gap: 20px;
+}
+
+@media screen and (min-width: 425px) {
+  .SchoolList--items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .SchoolList {
+    padding: 50px 250px;
+    & > h2 {
+      justify-self: flex-start;
+    }
+    & > a {
+      justify-self: flex-end;
+    }
+  }
+  .SchoolList--items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
