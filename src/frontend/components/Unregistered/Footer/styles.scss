@@ -1,0 +1,85 @@
+@import './../../../sass/utils/variables';
+
+.Footer {
+  color: $soft-color;
+  background: $tertiary-color;
+  animation: fadeIn 1s;
+  padding-bottom: 50px;
+  &__header {
+    padding: 25px;
+    gap: 5px;
+  }
+  &__header a {
+    color: $white;
+  }
+  // &__header--socialMedia {
+  //   padding-top: 20px;
+  //   & i {
+  //     font-size: $icon-size-sm;
+  //   }
+  // }
+  &__body {
+    padding: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    & nav {
+      gap: 20px;
+      display: grid;
+    }
+    & nav a {
+      color: $soft-color;
+      text-align: left;
+      padding: 0;
+      justify-self: flex-start;
+      justify-content: flex-start;
+      font-weight: normal;
+    }
+    &--navigation, &--about, &--product {
+      grid-template-rows: repeat(2, min-content);
+      gap: 10px;
+    }
+  }
+  // &__footer {
+  //   padding: 25px;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   background: $black;
+  //   padding-bottom: 60px;
+  //   justify-content: space-between;
+  //   & a {
+  //     padding: 10px;
+  //     color: $soft-color;
+  //   }
+  // }
+}
+
+@media (min-width: 768px) {
+  .Footer {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    &__header, &__body {
+      padding: 25px 50px;
+    }
+    // &__footer {
+    //   grid-column-end: span 2;
+    // }
+  }
+}
+
+@media (min-width: 1440px) {
+  .Footer {
+    &__header, &__body {
+      padding: 25px;
+    }
+    &__header {
+      padding-left: 20vw;
+      padding-right: 100px;
+    }
+    &__body {
+      padding-right: 20vw;
+    }
+    // &__footer {
+    //   padding: 25px 20vw;
+    //   padding-bottom: 60px;
+    // }
+  }
+}

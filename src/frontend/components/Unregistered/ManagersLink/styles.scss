@@ -1,0 +1,30 @@
+@import '../../../sass/utils/variables';
+
+.ManagersLink {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 100px 0;
+  gap: 20px;
+}
+
+.ManagersLink__body {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  gap: 25px;
+  & h2 {
+    max-width: 420px;
+  }
+  & a {
+    width: 250px;
+  }
+}
+
+.ManagersLink > .mask {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  width: 100%;
+  height: 250px;
+  transform: skew(0, -4deg);
+  z-index: -1;
+}

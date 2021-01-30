@@ -1,0 +1,36 @@
+@import '../../../sass/utils/variables';
+
+.FooterFixed {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  padding: 15px 0;
+  box-shadow: $box-shadow;
+}
+
+.FooterFixed.light {
+  background: $white;
+}
+.FooterFixed.dark {
+  background: $black;
+}
+.FooterFixed__nav {
+  display: grid;
+  gap: 25px;
+  padding: 0 25px;
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 500px) {
+  .FooterFixed__nav {
+    overflow: initial;
+    /* estilos ios */
+    overflow-x: initial;
+    -webkit-overflow-scrolling: initial;
+  }
+}

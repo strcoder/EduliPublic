@@ -1,0 +1,81 @@
+@import '../../../sass/utils/variables';
+
+.EduliInfo {
+  /* grid-template-columns: repeat(2, 1fr); */
+  row-gap: 20px;
+  column-gap: 50px;
+  padding: 25px;
+  margin-bottom: 100px;
+  background-color: rgba($primary-color, 0.9);
+  color: $soft-color;
+}
+
+.EduliInfo h2 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.EduliInfo--info {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.EduliInfo__image {
+  width: 300px;
+  justify-self: center;
+  padding-top: 25px;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  z-index: -1;
+}
+
+.EduliInfo__image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .EduliInfo {
+    grid-template-columns: 1fr auto;
+    padding: 50px;
+    /* gap: 25px;
+    padding: 25px; */
+    background-color: $primary-color;
+  }
+
+  .EduliInfo--info {
+    /* width: 400px; */
+    height: 200px;
+    overflow-y: auto;
+  }
+
+  .EduliInfo h2 {
+    grid-column-end: span 2;
+  }
+
+  .EduliInfo__image {
+    width: 350px;
+    height: 200px;
+    padding: 0;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    z-index: 0;
+  }
+
+  .EduliInfo__image img {
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .EduliInfo {
+    padding: 50px 15%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .EduliInfo {
+    padding: 50px 20%;
+  }
+}

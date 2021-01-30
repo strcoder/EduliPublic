@@ -1,0 +1,28 @@
+@import '../../../sass/utils/variables';
+
+.EduliSupport {
+  width: 100%;
+  /* padding: 100px 0; */
+  padding-bottom: 100px;
+  gap: 25px;
+}
+
+.EduliSupport p {
+  justify-self: center;
+  font-size: $h5-font-size;
+}
+.EduliSupport .flex {
+  justify-content: space-around;
+}
+
+.EduliSupport__logo {
+  width: 100px;
+  height: 50px;
+  -webkit-appearance: none;
+}
+
+.EduliSupport__logo img {
+  width: 100%;
+  object-fit: contain;
+  -webkit-appearance: none;
+}

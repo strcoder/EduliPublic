@@ -1,0 +1,77 @@
+@import '../../../sass/utils/variables';
+
+.PlatformsLinks {
+  padding: 100px 0;
+  align-items: center;
+}
+
+.PlatformsLinks__body {
+  justify-content: flex-end;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  padding-right: 20px;
+}
+
+.PlatformsLinks h2 {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  max-width: 600px;
+}
+
+.PlatformsLinks > .mask {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  height: 300px;
+  transform: skew(0, 4deg);
+  z-index: -1;
+}
+
+.PlatformsLinks__body--item {
+  width: 250px;
+  height: 60px;
+  padding: 0;
+  -webkit-appearance: none;
+}
+
+.PlatformsLinks__body--item img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  -webkit-appearance: none;
+}
+
+.PlatformsLinks__body--item:first-child {
+  padding-right: 100px;
+}
+
+.PlatformsLinks__body--item:last-child {
+  padding-left: 100px;
+}
+
+@media screen and (min-width: 425px) {
+  .PlatformsLinks__body {
+    padding-right: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .PlatformsLinks__body {
+    padding-right: 200px;
+  }
+  .PlatformsLinks h2 {
+    padding-left: 200px;
+  }
+  .mask {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .PlatformsLinks h2 {
+    max-width: 800px;
+  }
+}

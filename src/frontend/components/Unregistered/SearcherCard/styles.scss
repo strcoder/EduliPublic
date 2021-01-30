@@ -1,0 +1,65 @@
+@import '../../../sass/utils/variables';
+
+.SearcherCard {
+  transition: $transition-theme;
+  border-radius: $border-radius;
+}
+
+.SearcherCard a {
+  text-transform: none;
+}
+
+.SearcherCard--form {
+  padding: 25px;
+  gap: 10px;
+
+}
+
+.SearcherCard--image {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 25px;
+  width: 80vw;
+  max-height: 360px;
+}
+
+.SearcherCard--image img {
+  width: 100%;
+  // min-height: 260px;
+  max-height: 250px;
+  object-fit: contain;
+  padding-bottom: 25px;
+}
+
+@media screen and (min-width: 500px) {
+  .SearcherCard {
+    grid-template-columns: auto auto;
+  }
+  .SearcherCard--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .SearcherCard:nth-child(4) .SearcherCard--form {
+    grid-column-start: 2;
+  }
+
+  .SearcherCard:nth-child(4) .SearcherCard--image {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .SearcherCard--image {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .SearcherCard--image {
+    width: 300px;
+  }
+}

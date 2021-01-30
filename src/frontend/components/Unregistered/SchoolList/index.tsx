@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import SchoolCard from '../SchoolCard';
 import './styles.scss';
 
-const SchoolList = () => {
+const SchoolList = ({ title, tag, link }) => {
   return (
     <section className='SchoolList'>
-      <h2>Featured Schools</h2>
+      <h2>{title}</h2>
       <div className='SchoolList--items'>
         <SchoolCard />
         <SchoolCard />
@@ -14,9 +14,9 @@ const SchoolList = () => {
         <SchoolCard />
       </div>
       <Link
-        to='/institutes'
+        to={link}
         className='light__btn-white dark__btn-dark'
-        title='Ver todas las escuelas destacadas'
+        title={`Ver todas las escuelas ${tag}`}
       >
         Ver más...
       </Link>
