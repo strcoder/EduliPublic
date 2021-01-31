@@ -3,7 +3,7 @@ import './styles.scss';
 
 const EduliInfo = () => {
   return (
-    <section className='EduliInfo'>
+    <section className='EduliInfo fadeIn'>
       <h2>¿Que es eduli?</h2>
       <div className='EduliInfo--info'>
         <p>Eduli es una plataforma en la cual podras encontrar facilmente una institutcion adecuada a tu nivel academico, ubicacion y al preecio que mejor se adapte a tu bolsillo.</p>

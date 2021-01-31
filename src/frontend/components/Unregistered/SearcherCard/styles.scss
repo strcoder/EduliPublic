@@ -3,6 +3,7 @@
 .SearcherCard {
   transition: $transition-theme;
   border-radius: $border-radius;
+  animation-duration: $animate-duration;
 }
 
 .SearcherCard a {

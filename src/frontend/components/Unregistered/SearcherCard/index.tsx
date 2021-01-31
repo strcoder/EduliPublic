@@ -4,7 +4,7 @@ import './styles.scss';
 
 const SearcherCard = ({ title, description, placeholder, image, imageAlt, link, linkText }: any) => {
   return (
-    <div className='SearcherCard bg-base'>
+    <div className='SearcherCard bg-base bounceIn'>
       <div className='SearcherCard--form'>
         <p><strong>{title}</strong></p>
         <p>{description}</p>

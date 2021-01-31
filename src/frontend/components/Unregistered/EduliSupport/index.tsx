@@ -3,7 +3,7 @@ import './styles.scss';
 
 const EduliSupport = () => {
   return (
-    <section className='EduliSupport'>
+    <section className='EduliSupport bounceIn'>
       <p>
         <strong>Empresas que respaldan Eduli</strong>
       </p>
