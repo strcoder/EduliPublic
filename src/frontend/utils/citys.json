@@ -1,0 +1,193 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "city": "Aguascalientes",
+      "towns": [
+        "Aguascalientes",
+        "Asientos",
+        "Calvillo",
+        "Cosío",
+        "El llano",
+        "Jesús María",
+        "Pabellón de Artega",
+        "Rincón de Romos",
+        "San Francisco de los Romo",
+        "San José de Garcia",
+        "Tepezalá"
+      ]
+    },
+    {
+      "id": 2,
+      "city": "Baja California",
+      "towns": []
+    },
+    {
+      "id": 3,
+      "city": "Baja California Sur",
+      "towns": []
+    },
+    {
+      "id": 4,
+      "city": "Campeche",
+      "towns": []
+    },
+    {
+      "id": 5,
+      "city": "Coahuila",
+      "towns": []
+    },
+    {
+      "id": 6,
+      "city": "Colima",
+      "towns": []
+    },
+    {
+      "id": 7,
+      "city": "Chiapas",
+      "towns": []
+    },
+    {
+      "id": 8,
+      "city": "Chihuahua",
+      "towns": []
+    },
+    {
+      "id": 9,
+      "city": "Ciudad de México",
+      "towns": [
+        "Coyoacán",
+        "Miguel Hidalgo",
+        "La Magdalena Contreras",
+        "Tláhuac",
+        "Azcapotzalco",
+        "Iztacalco",
+        "Álvaro Obregón",
+        "Xochimilco",
+        "Venustiano Carranza",
+        "Tlalpan",
+        "Cuajimalpa de Morelos",
+        "Cuauhtémoc",
+        "Iztapalapa",
+        "Milpa Alta",
+        "Benito Juárez",
+        "Guztavo A. Madero"
+      ]
+    },
+    {
+      "id": 10,
+      "city": "Durango",
+      "towns": []
+    },
+    {
+      "id": 11,
+      "city": "Estado de México",
+      "towns": []
+    },
+    {
+      "id": 12,
+      "city": "Guanajuato",
+      "towns": []
+    },
+    {
+      "id": 13,
+      "city": "Guerrero",
+      "towns": []
+    },
+    {
+      "id": 14,
+      "city": "Hidalgo",
+      "towns": []
+    },
+    {
+      "id": 15,
+      "city": "Jalisco",
+      "towns": []
+    },
+    {
+      "id": 16,
+      "city": "Michoacan",
+      "towns": []
+    },
+    {
+      "id": 17,
+      "city": "Morelos",
+      "towns": []
+    },
+    {
+      "id": 18,
+      "city": "Nayarit",
+      "towns": []
+    },
+    {
+      "id": 19,
+      "city": "Nuevo León",
+      "towns": []
+    },
+    {
+      "id": 20,
+      "city": "Oaxaca",
+      "towns": []
+    },
+    {
+      "id": 21,
+      "city": "Puebla",
+      "towns": []
+    },
+    {
+      "id": 22,
+      "city": "Querétaro",
+      "towns": []
+    },
+    {
+      "id": 23,
+      "city": "Quintana Roo",
+      "towns": []
+    },
+    {
+      "id": 24,
+      "city": "San Luis Potosí",
+      "towns": []
+    },
+    {
+      "id": 25,
+      "city": "Sinaloa",
+      "towns": []
+    },
+    {
+      "id": 26,
+      "city": "Sonora",
+      "towns": []
+    },
+    {
+      "id": 27,
+      "city": "Tabasco",
+      "towns": []
+    },
+    {
+      "id": 28,
+      "city": "Tamaulipas",
+      "towns": []
+    },
+    {
+      "id": 29,
+      "city": "Tlaxcala",
+      "towns": []
+    },
+    {
+      "id": 30,
+      "city": "Veracruz",
+      "towns": []
+    },
+    {
+      "id": 31,
+      "city": "Yucatán",
+      "towns": []
+    },
+    {
+      "id": 32,
+      "city": "Zacatecas",
+      "towns": []
+    }
+  ]
+}

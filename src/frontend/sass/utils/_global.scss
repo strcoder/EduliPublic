@@ -115,7 +115,7 @@ button, a {
   @include button();
 }
 
-.btn-link {
+.btn-link, .light__btn-link {
   @include buttonLink();
 }
 

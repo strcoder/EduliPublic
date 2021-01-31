@@ -1,0 +1,26 @@
+.Pagination {
+  justify-self: center;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.Pagination > .btn-link-success {
+  font-size: large;
+}
+
+.Pagination button {
+  padding: 7px;
+}
+
+@media screen and (min-width: 375px) {
+  .Pagination button {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .Pagination button {
+    padding: 10px 14px;
+  }
+}
