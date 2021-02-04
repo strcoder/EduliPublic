@@ -1,7 +1,7 @@
 @import '../../../sass/utils/variables';
 
 .SchoolContain {
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
   & > h2, > h3 {
     padding: 50px 20px;
   }
@@ -143,6 +143,9 @@
     padding: 10px 20px;
     grid-column-start: 1;
     grid-template-columns: repeat(2, 1fr);
+    & > .StarsScore {
+      justify-self: flex-end;
+    }
   }
   & p:nth-child(3) {
     grid-column-end: span 2;

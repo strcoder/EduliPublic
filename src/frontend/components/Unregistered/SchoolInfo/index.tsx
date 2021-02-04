@@ -13,6 +13,7 @@ const SchoolInfo = () => {
           </figure>
           <h1>Nombre de la escuela</h1>
           <StarsScore score={5} starColor='' />
+          {/* TODO: Agregar redes sociales */}
         </div>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea debitis sunt in aliquam ullam ratione sequi esse porro. Beatae sit maiores vitae ad fugit iusto vero cum corporis sint ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eos dolorum dolores fugiat rem harum eius, quia quos ad consectetur esse possimus, illum impedit, quo ex saepe. Voluptatibus, natus accusamus.</p>
       </div>

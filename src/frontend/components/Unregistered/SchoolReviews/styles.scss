@@ -1,0 +1,69 @@
+@import '../../../sass/utils/variables';
+
+.SchoolReviews {
+  padding: 50px 10%;
+  gap: 20px;
+}
+
+.SchoolReview__body {
+  gap: 20px;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.CardReview--date {
+  position: relative;
+  font-weight: bold;
+  justify-self: flex-end;
+}
+
+.CardReview {
+  padding: 25px;
+  gap: 10px;
+  box-shadow: $box-shadow-sm;
+  border: 1px solid lighten($black, 80%);
+  border-radius: $border-radius;
+  transition: $transition-base;
+  &:hover {
+    border: none;
+    background-color: $white;
+  }
+}
+
+.badge {
+  font-size: $font-size-xs;
+  padding: 2.5px 5px;
+  align-items: flex-start;
+  max-height: 20px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  color: $soft-color;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+}
+
+.CardReview__header {
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+}
+
+.CardReview__header--avatar {
+  width: 60px;
+  height: 60px;
+  grid-row-end: span 2;
+}
+
+.CardReview__header--user {
+  & a {
+    text-align: left;
+    padding: 0;
+    max-width: 120px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .SchoolReview__body {
+    grid-template-columns: repeat(auto-fit, minmax(398px, 1fr));
+  }
+}

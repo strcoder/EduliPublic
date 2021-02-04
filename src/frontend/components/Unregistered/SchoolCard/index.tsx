@@ -30,7 +30,7 @@ const SchoolCard = ({ institute }: any) => {
           </Link>
           <Link
             to='/school-register/123'
-            className='light__btn-primary dark__btn-primary'
+            className='light__btn-outline-primary dark__btn-outline-primary'
             title='Comienza tu registro en'
           >
             Registrate

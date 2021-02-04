@@ -1,0 +1,116 @@
+@import '../../../sass/utils/variables';
+
+.SchoolTeam {
+  // padding: 50px 450px;
+  // justify-items: center;
+  padding: 0 10%;
+}
+
+.SchoolTeam__header {
+  border-radius: $border-radius;
+  padding: 25px 40px;
+  column-gap: 25px;
+  justify-self: center;
+  // justify-items: center;
+  // justify-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.SchoolTeam__header--avatar {
+  width: 100px;
+  height: 100px;
+  grid-row-end: span 2;
+  border-radius: $circle-radius;
+  & img {
+    border-radius: $circle-radius;
+    object-fit: cover;
+  }
+}
+
+.SchoolTeam__header--info {
+  grid-row-end: span 2;
+}
+
+.SchoolTeam__header--contact a {
+  width: 100%;
+}
+
+.SchoolTeam__body {
+  gap: 20px;
+  // padding: 50px 0;
+  margin-bottom: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.TeamCard {
+  // max-width: 350px;
+  // padding: 25px;
+  height: 350px;
+  // border: 1px solid lighten($gray-color, 70%);
+  // box-shadow: $box-shadow-sm;
+  // border-radius: $border-radius;
+}
+
+
+.TeamCard--avatar {
+  // margin: 30px;
+  // margin-bottom: 0;
+  // padding: 25px;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  // margin-top: 500px;
+  // height: 0;
+  position: relative;
+  justify-self: center;
+  top: 50%;
+  z-index: 20;
+  border-radius: $circle-radius;
+  box-shadow: $box-shadow-sm;
+  & img {
+    // height: 150px;
+    object-fit: cover;
+    // object-position: center;
+    border-radius: $circle-radius;
+  }
+}
+
+.TeamCard__body {
+  padding: 10px 20px;
+  text-align: center;
+  justify-items: center;
+  align-self: flex-end;
+  position: relative;
+  padding-top: 80px;
+  box-shadow: $box-shadow-sm;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  // border: 1px solid lighten($black, 80%);
+  & > h6 {
+    font-weight: 500;
+    font-size: $h4-font-size;
+  }
+  & > .grid {
+    gap: 5px;
+    padding-bottom: 15px;
+  }
+  // & > .flex:nth-child(2) {
+  //   justify-self: stretch;
+  //   justify-content: space-between;
+  // }
+}
+
+.TeamCard__footer {
+  width: 100%;
+  & > .btn-primary {
+    width: 100%;
+    // padding: 12px 0;
+    text-transform: none;
+    align-items: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  & > .btn-primary span {
+    padding-left: 10px;
+  }
+}
