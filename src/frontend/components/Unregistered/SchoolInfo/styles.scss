@@ -1,0 +1,165 @@
+@import '../../../sass/utils/variables';
+
+.SchoolInfo {
+  padding: 25px;
+  gap: 30px;
+}
+
+.SchoolInfo__header {
+  gap: 15px;
+  animation-duration: $animate-duration;
+}
+
+.SchoolInfo__header--main {
+  width: 100%;
+  row-gap: 5px;
+  column-gap: 10px;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  & figure {
+    width: 80px;
+    height: 80px;
+    grid-row-end: span 2;
+  }
+  & h1 {
+    font-size: $font-size-xl;
+    align-self: flex-end;
+  }
+  & .flex {
+    align-self: flex-start;
+    grid-column-start: 2;
+  }
+}
+
+.SchoolInfo__body {
+  gap: 30px;
+  animation-duration: $animate-duration;
+}
+
+.SchoolInfo--payment {
+  display: grid;
+  column-gap: 0;
+  grid-row-start: 1;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.SchoolInfo--payment select {
+  width: 100%;
+  font-size: $font-size-lg;
+  font-weight: bold;
+  &#SelectPayment {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &#SelectPlan {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.SchoolInfo--payment button {
+  grid-column-end: span 2;
+}
+
+.PaymentInfo {
+  grid-column-end: span 2;
+  gap: 5px;
+  & .flex {
+    justify-content: space-between;
+  }
+}
+
+.payment-information {
+  padding: 25px 0;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+  gap: 10px;
+  & .flex {
+    justify-content: space-between;
+  }
+  &-list {
+    gap: 5px;
+  }
+  &-list li {
+    align-items: center;
+  }
+  &-list strong {
+    padding-left: 5px;
+  }
+}
+
+.SchoolInfo--payment {
+  padding: 0;
+  align-items: flex-start;
+  grid-template-rows: repeat(3, min-content);
+  animation-duration: $animate-duration;
+}
+
+.SchoolInfo--details {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-row-start: 2;
+  animation-duration: $animate-duration;
+  gap: 5px;
+  & p:nth-child(2n) {
+    justify-self: flex-end;
+  }
+  & p {
+    display: flex;
+    align-items: center;
+  }
+  & p strong {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .SchoolInfo {
+    padding: 50px 10%;
+    transition: $transition-base;
+  }
+  .SchoolInfo__body {
+    row-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .SchoolInfo--payment {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-self: center;
+  }
+  .payment-information {
+    grid-row-start: span 2;
+    padding-right: 5%;
+  }
+  .SchoolInfo--details {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .SchoolInfo {
+    padding: 50px 20%;
+  }
+
+  .SchoolInfo__header--main {
+    display: flex;
+    & figure {
+      grid-row-end: span 1;
+    }
+    & h1 {
+      font-size: $h1-font-size;
+      align-self: center;
+    }
+    & .flex {
+      align-self: flex-start;
+      grid-column-start: 3;
+      align-self: center;
+    }
+  }
+
+  .payment-information {
+    padding-right: 15%;
+  }
+}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-// import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { FaAngleLeft, FaAngleRight, FaSearch } from 'react-icons/fa';
-// import { useStateValue } from '../../../Context';
 import SchoolCard from '../../../components/Unregistered/SchoolCard';
 import Footer from '../../../components/Unregistered/Footer';
 import Pagination from '../../../components/General/Pagination';
@@ -13,6 +12,11 @@ const Schools = () => {
   const [searchFocus, setSearchFocus] = useState(false);
   return (
     <>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Eduli - Schools</title>
+        <meta name='description' content='Escuelas registradas dentro de eduli' />
+      </Helmet>
       <SchoolFilter />
       <main className='Schools'>
         <section className='Schools__header'>
@@ -69,9 +73,6 @@ const Schools = () => {
         <aside className='SchoolsReference bg-base'>
           <p>Ejemplo</p>
         </aside>
-        {/* <section className='Schools__footer'>
-          <Pagination length={100} page={page} setPage={setPage} />
-        </section> */}
       </main>
       <Footer />
     </>

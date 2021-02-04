@@ -4,6 +4,7 @@ import Layout from '../../components/Unregistered/Layout';
 import Home from '../../pages/Unregistered/Home';
 import NotFound from '../../pages/General/NotFound';
 import Schools from '../../pages/Unregistered/Schools';
+import School from '../../pages/Unregistered/School';
 
 const RoutesUnregistered = () => {
   return (
@@ -12,6 +13,7 @@ const RoutesUnregistered = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/schools' component={Schools} />
+          <Route exact path='/school/:id' component={School} />
           <Route component={NotFound} />
         </Switch>
       </Layout>

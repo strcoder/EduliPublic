@@ -1,11 +1,9 @@
 import React from 'react';
-import { useStateValue } from '../../../Context';
 import './styles.scss';
 
 const Footer = () => {
-  const { theme } = useStateValue();
   return (
-    <footer className={`FooterFixed ${theme}`}>
+    <footer className='FooterFixed bg-base'>
       <nav className='FooterFixed__nav'>
         <small>Terminos y condiciones</small>
         <small>Contacto</small>

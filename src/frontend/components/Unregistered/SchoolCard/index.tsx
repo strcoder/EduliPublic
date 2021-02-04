@@ -22,7 +22,7 @@ const SchoolCard = ({ institute }: any) => {
         </p>
         <div className='flex'>
           <Link
-            to={`/institute/${institute?._id || '123'}`}
+            to={`/school/${institute?._id || '123'}`}
             className='light__btn-link-secondary dark__btn-link-soft'
             title='Conoce más acerca de '
           >

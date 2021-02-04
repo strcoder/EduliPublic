@@ -1,0 +1,51 @@
+@import '../../../sass/utils/variables';
+
+.School {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1024px) {
+  .School {
+    padding-top: 80px;
+  }
+}
+
+// .School__header--info .grid {
+//   grid-template-columns: repeat(3, 1fr);
+// }
+
+// .School__header--info .grid p {
+//   grid-column-end: span 3;
+// }
+
+// .choise-payment {
+//   /* row-gap: 25px; */
+//   grid-template-columns: repeat(6, 1fr);
+// }
+
+// .choise-payment button:nth-child(1), .choise-payment button:nth-child(2) {
+//   width: 100%;
+//   grid-column-end: span 3;
+// }
+
+// .choise-payment button:nth-child(4), .choise-payment button:nth-child(5), .choise-payment button:nth-child(6) {
+//   grid-column-end: span 2;
+// }
+
+// .choise-payment i {
+//   display: none;
+//   justify-self: center;
+//   grid-column-start: span 6;
+// }
+
+// .payment-information {
+//   padding: 25px 0;
+// }
+
+// .School--divider {
+//   margin-top: 10px;
+//   margin-bottom: 30px;
+//   box-shadow: $box-shadow;
+//   border-bottom: 1px solid $gray-400;
+// }
+

@@ -4,6 +4,7 @@ import Layout from '../../components/Unregistered/Layout';
 import Home from '../../pages/Unregistered/Home';
 import NotFound from '../../pages/General/NotFound';
 import Schools from '../../pages/Unregistered/Schools';
+import School from '../../pages/Unregistered/School';
 
 const serverRoutes = () => {
   return [
@@ -16,6 +17,11 @@ const serverRoutes = () => {
       path: '/schools',
       exact: true,
       component: Schools,
+    },
+    {
+      path: '/school/:id',
+      exact: true,
+      component: School,
     },
     {
       name: 'NotFound',

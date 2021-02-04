@@ -6,14 +6,9 @@
   position: fixed;
   padding: 15px 0;
   box-shadow: $box-shadow;
+  z-index: 100;
 }
 
-.FooterFixed.light {
-  background: $white;
-}
-.FooterFixed.dark {
-  background: $black;
-}
 .FooterFixed__nav {
   display: grid;
   gap: 25px;

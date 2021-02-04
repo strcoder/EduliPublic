@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Hero from '../../../components/Unregistered/Hero';
+import SchoolTypeList from '../../../components/Unregistered/SchoolTypeList';
+import SchoolList from '../../../components/Unregistered/SchoolList';
 import EduliInfo from '../../../components/Unregistered/EduliInfo';
 import EduliSupport from '../../../components/Unregistered/EduliSupport';
-import Footer from '../../../components/Unregistered/Footer';
-import Hero from '../../../components/Unregistered/Hero';
 import ManagersLink from '../../../components/Unregistered/ManagersLink';
 import PlatformsLinks from '../../../components/Unregistered/PlatformsLinks';
-import SchoolList from '../../../components/Unregistered/SchoolList';
-import SchoolTypeList from '../../../components/Unregistered/SchoolTypeList';
+import Footer from '../../../components/Unregistered/Footer';
 import SearcherSection from '../../../components/Unregistered/SearcherSection';
 import './styles.scss';
 
