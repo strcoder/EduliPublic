@@ -37,7 +37,7 @@ body.light {
     background-color: $white;
   }
   & .light__border-base, .border-base {
-    border: $border-width solid $border-color;
+    border: $border-width solid #171f3820;
   }
   @each $name, $color in $theme-light {
     & .light__bg-#{$name},
@@ -66,10 +66,10 @@ body.dark {
     color: $soft-color;
   }
   & .dark__bg-base, .bg-base {
-    background-color: lighten($black, 7%);
+    background-color: $black;
   }
   & .dark__border-base, .border-base {
-    border: $border-width solid lighten($black, 5%);
+    border: $border-width solid $border-color;
   }
   @each $name, $color in $theme-dark {
     & .dark__bg-#{$name},
@@ -94,7 +94,7 @@ body.dark {
 button, a {
   border: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: bold;
   padding: 10px 14px;
   text-align: center;
   align-self: center;

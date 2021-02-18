@@ -2,9 +2,9 @@
 Sistema de educación en linea
 
 ## Requerimientos
-Node 12.14.0 https://nodejs.org/es/
+Node 14.15.0 https://nodejs.org/es/
 ####
-Npm 6.14.5
+Npm 7.5.2
 ####
 Git https://git-scm.com/
 
@@ -12,11 +12,11 @@ Git https://git-scm.com/
 ### Clonar con SSH
 En terminal o git bash escribir el siguinte comando:
 ###
-git clone git@github.com:strcoder/Eduli.git
+git clone git@github.com:strcoder/EduliPublic.git
 ### Clonar con HTTPS
 En terminal o git bash escribir el siguinte comando:
 ###
-git clone https://github.com/strcoder/Eduli.git
+git clone https://github.com/strcoder/EduliPublic.git
 ### Descargar
 Dar click en el boton codigo y descargar el zip
 
@@ -26,10 +26,10 @@ Ya posicionado correectamente en la raíz del proyecto escribir el siguiente com
 ###
 npm install && npm install -D
 
-## Variables de entorno 
+## Variables de entorno
 
 Ya que las dependencias sean instaladas correctamente debera asignar las variables de entorno para que el proyecto funcione correctamente
-Las variables de entorno estan en el archivo 
+Las variables de entorno estan en el archivo
 
 ### .env.example
 
@@ -45,26 +45,22 @@ PORT=3000
 ###
 ENV=development
 
-API_URL=https://eduliapi.vercel.app
+API_URL=
 ###
-ADMIN_API_KEYS_TOKEN=2f90df25038c836a029b881674c9814ff05feb500a82f83cd88d14b77d558d07
+ADMIN_API_KEYS_TOKEN=
 
 ## Scripts diponibles
 
 UNa vez terminadas las configuraciones podra correr los siguientes scripts para correr el proyecto
 
-### npm run start
-
-Correra el programa con node en el modo que se le defina en la variable de entorno ENV 
-
-### npm run start:dev
-
-Correra el programa con nodemon en modo que se le defina en la variable de entorno ENV(Hot reload)
-
 ### npm run build
 
-Corre las configuraciones para el proyecto en modo producción (En este caso la variable de entono ENV deberá de ser igual a production)(ENV= production)
+Este script generara el build mediante esbuild el cual sera el que correran los dos siguientes scripts
 
-### npm run lint 
+### npm run dev
 
-Con este comando eslint buscara problemas dentro del codigo y de acuerdo con las configuraciones que se le definal dentro del archivo .eslintrc e intentarra solucionarlo para evitar problemas a la hora de correr el proyecto
+Correra el programa con nodemon
+
+### npm run start
+
+Correra el programa con node

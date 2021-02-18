@@ -7,7 +7,7 @@ const EduliSupport = () => {
       <p>
         <strong>Empresas que respaldan Eduli</strong>
       </p>
-      <div className='flex'>
+      <div className='EduliSupport--items bg-base border-base'>
         <figure className='EduliSupport__logo'>
           <img src='/google.png' alt='' />
         </figure>
@@ -15,7 +15,13 @@ const EduliSupport = () => {
           <img src='/react-logo.png' alt='' />
         </figure>
         <figure className='EduliSupport__logo'>
-          <img src='/angular.png' alt='' />
+          <img src='/google.png' alt='' />
+        </figure>
+        <figure className='EduliSupport__logo'>
+          <img src='/react-logo.png' alt='' />
+        </figure>
+        <figure className='EduliSupport__logo'>
+          <img src='/google.png' alt='' />
         </figure>
       </div>
     </section>

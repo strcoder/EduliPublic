@@ -11,6 +11,10 @@
   align-items: center;
   padding: 0 6%;
   display: grid;
+  & h1 {
+    max-width: 500px;
+    font-size: $h3-font-size;
+  }
 }
 
 .Hero__body {
@@ -19,7 +23,7 @@
 
 .Hero__body--start {
   gap: 10px;
-  padding-top: 15%;
+  // padding-top: 15%;
   grid-template-columns: repeat(2, 1fr);
   & p {
     grid-column-end: span 2;
@@ -35,11 +39,57 @@
   }
 }
 
+.custom-shape-divider-top-1612483813 {
+  display: none;
+  position: absolute;
+  top: 579px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1612483813 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1612483813 .shape-fill {
+  transition: $transition-theme;
+  &.light {
+    fill: $tertiary-color;
+  }
+  &.dark {
+    fill: $tertiary-color-dark;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Hero h1 {
+    font-size: $h1-font-size;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .Hero {
     margin-top: 80px;
+    // min-height: 600px;
+    // height: 600px;
   }
   .Hero__picture img {
     height: 560px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Hero {
+    height: 500px;
+    min-height: 500px;
+  }
+  .custom-shape-divider-top-1612483813 {
+    display: grid;
   }
 }

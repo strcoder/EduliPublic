@@ -7,22 +7,32 @@
   display: grid;
   flex-wrap: wrap;
   border-radius: 0;
-  color: $primary-color;
   justify-items: center;
   transition: $transition-theme;
   animation-duration: $animate-duration;
-  // border: $border-width solid $border-color;
-}
-
-.SchoolTypeCard.bg-base:hover {
-  color: $white;
-  background-color: $primary-color;
+  &.light {
+    color: $success-color;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $success-color;
+    }
+  }
+  &.dark {
+    color: $white;
+    // border: 1px solid $soft-color;
+    background-color: lighten($black, 12%);
+    &:hover {
+      color: $white;
+      background: rgba($white, 0.2);
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .SchoolTypeCard {
     width: 180px;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-sm;
     border-radius: $border-radius;
   }
 }

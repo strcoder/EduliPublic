@@ -1,0 +1,381 @@
+@import '../../../sass/utils/variables';
+
+.GeneralEduliInfo {
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  transition: $transition-base;
+  justify-content: space-evenly;
+}
+
+.IconBox {
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  justify-items: center;
+  animation-duration: $animate-duration;
+  &--icon {
+    padding: 25px;
+    max-width: 100px;
+    color: $soft-color;
+    justify-self: center;
+    font-size: $icon-size;
+    justify-content: center;
+    border-radius: $organic-radius;
+  }
+  & span {
+    font-weight: 600;
+  }
+  & p {
+    font-weight: bold;
+    font-size: $h3-font-size;
+  }
+}
+
+.InstitutesSection {
+  width: 100%;
+  row-gap: 50px;
+  column-gap: 25px;
+  padding: 25px 20px;
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
+  transition: $transition-theme;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.custom-shape-divider-top-1612553442 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 40px;
+}
+
+.custom-shape-divider-top-1612553442 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1612553442 .shape-fill {
+  transition: $transition-theme;
+  &.light {
+    fill: $white;
+  }
+  &.dark {
+    fill: $black;
+  }
+}
+
+////////////////////////////////////////////////////////
+
+.custom-shape-divider-bottom-1612553577 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1612553577 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1612553577 .shape-fill {
+  transition: $transition-theme;
+  &.light {
+    fill: $white;
+  }
+  &.dark {
+    fill: $black;
+  }
+  &.bg-tertiary {
+    fill: $tertiary-color;
+  }
+}
+
+////////////////////////////////////
+
+.LevelCard {
+  box-shadow: none !important;
+  &__body {
+    width: 100%;
+  }
+}
+
+.LevelCard--like {
+  animation-duration: 0.6s;
+}
+
+.LevelCard__back {
+  transition: $transition-theme;
+}
+
+.InstitutesSection__header, .InstitutesSection__footer {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 350px;
+  max-height: 360px;
+  border-radius: $border-radius;
+  animation-duration: $animate-duration;
+  transition: $transition-base;
+  font-size: $h3-font-size;
+  &:hover {
+    color: $white;
+    background-color: $tertiary-color;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .InstitutesSection {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .LevelCard {
+    width: 350px;
+    // border: 0.0625rem solid #171f3820;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .LevelCard {
+    height: 360px;
+    &__body {
+      height: 165.31px;
+    }
+    &__body p {
+      overflow: auto;
+      max-height: 68px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: $gray-400;
+        border-radius: $border-radius-sm;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $tertiary-color;
+        border-radius: $border-radius-sm;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $primary-color;
+      }
+    }
+  }
+  .InstitutesSection__header, .InstitutesSection__footer {
+    font-size: $h1-font-size;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .InstitutesSection {
+    padding: 25px 12%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .InstitutesSection {
+    padding: 25px 24%;
+  }
+  .GeneralEduliInfo {
+    padding: 50px 350px;
+  }
+}
+
+////////////////////////////////////////////////////
+
+.AppsSection {
+  padding: 150px 25px;
+  justify-content: center;
+  justify-items: center;
+  gap: 25px;
+  text-align: center;
+  animation-duration: $animate-duration;
+  & h2 {
+    max-width: 300px;
+    font-size: $h4-font-size
+  }
+  & a {
+    padding: 18px;
+    width: 100%;
+  }
+  & a div {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .AppsSection {
+    & h2 {
+      grid-column-end: span 2;
+    }
+    & a {
+      &:nth-child(2) {
+        margin-right: 0px;
+      }
+      &:nth-child(3) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .AppsSection {
+    & h2 {
+      font-size: $h2-font-size;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+
+.WhatIsEduli {
+  padding: 25px 20px;
+  padding-bottom: 100px;
+  justify-content: center;
+  justify-items: center;
+  gap: 25px;
+  &__info {
+    // max-width: 400px;
+    gap: 15px;
+    & div {
+      grid-template-columns: auto 1fr;
+      & span {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.WhatIsEduli--image {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .WhatIsEduli {
+    padding: 25px 10%;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .WhatIsEduli {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    & h2 {
+      grid-column-end: span 2;
+    }
+  }
+  .WhatIsEduli--image {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-self: center;
+    // width: 500px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .WhatIsEduli {
+    padding: 25px 22%;
+    padding-bottom: 100px;
+  }
+}
+
+/////////////////////////////////////////////////////
+
+.EduliFAQ {
+  padding: 100px 25px;
+  padding-top: 50px;
+  // justify-content: center;
+  // justify-items: center;
+  gap: 50px;
+}
+
+.FaqAccordion {
+  transition: $transition-theme;
+  border-radius: $border-radius;
+  & .AccordionCard:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  & .AccordionCard:last-child {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+.AccordionCard {
+  // width: 700px;
+  transition: $transition-theme;
+  &__header {
+    display: grid;
+    width: 100%;
+    padding: 25px;
+    align-items: center;
+    justify-self: normal;
+    justify-items: flex-start;
+    transition: $transition-base;
+    grid-template-columns: 1fr auto;
+    &.active {
+      box-shadow: $box-shadow-sm;
+    }
+    & i {
+      align-items: center;
+      transition: $transition-base;
+      &.active {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__body {
+    height: 0;
+    z-index: -1;
+    transition: $transition-base;
+    & p {
+      display: none;
+    }
+    &.active {
+      padding: 25px;
+      display: flex;
+      z-index: 0;
+      height: auto;
+      & p {
+        display: flex;
+        animation: fadeIn $animate-duration;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .EduliFAQ {
+    padding: 100px 10%;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .EduliFAQ {
+    padding: 100px 25%;
+    padding-top: 50px;
+  }
+}

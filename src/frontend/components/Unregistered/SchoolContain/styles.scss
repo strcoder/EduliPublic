@@ -101,10 +101,11 @@
     grid-column-start: 1;
     grid-row-start: 1;
     z-index: 11;
-    justify-self: flex-start;
+    justify-self: flex-end;
+    align-self: flex-start;
     padding: 0;
-    bottom: 38%;
-    left: 10px;
+    top: 25px;
+    right: 10px;
     font-size: $icon-size-md;
   }
   &__back {
@@ -142,6 +143,7 @@
     padding-top: 15px;
     padding: 10px 20px;
     grid-column-start: 1;
+    gap: 5px;
     grid-template-columns: repeat(2, 1fr);
     & > .StarsScore {
       justify-self: flex-end;
@@ -154,12 +156,19 @@
     width: 100%;
     grid-column-end: span 2;
     justify-content: space-between;
+    & a {
+      width: 100%;
+    }
+    & a:first-child {
+      padding-left: 0;
+      justify-content: flex-start;
+    }
   }
-  & a:last-child {
-    justify-self: flex-end;
-    justify-items: flex-end;
-    grid-column-end: span 2;
-  }
+  // & a:last-child {
+  //   justify-self: flex-end;
+  //   justify-items: flex-end;
+  //   grid-column-end: span 2;
+  // }
 }
 
 .CourseCard {

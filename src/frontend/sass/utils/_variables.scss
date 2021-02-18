@@ -28,10 +28,11 @@ $gray-900: #424767;
 //* Color scheme: Light *//
 $light-bg: #f4f7f9;
 $primary-color: #042454;
-$secondary-color: #0d3177;
+$secondary-color: #0056b3;
 $tertiary-color: #02132d;
-$success-color: #0056b3;
-$warning-color: #ac145a;
+$accent-color: #C41C6C;
+$success-color: #0d3177;
+$warning-color: #841C7C;
 $danger-color: #8c0404;
 $dark-color: #041721;
 $gray-color: #313840;
@@ -40,16 +41,17 @@ $disable-color: #93a5be;
 
 //* Color scheme: Light *//
 $dark-bg: #282828;
-$primary-color-dark: lighten(#042454, 5%);
-$secondary-color-dark: lighten(#0d3177, 5%);
-$tertiary-color-dark: lighten(#02132d, 5%);
-$success-color-dark: lighten(#0056b3, 5%);
-$warning-color-dark: lighten(#ac145a, 5%);
-$danger-color-dark: lighten(#8c0404, 5%);
-$dark-color-dark: lighten(#041721, 0%);
-$gray-color-dark: lighten(#313840, 5%);
-$soft-color-dark: lighten(#f9f9f9, 5%);
-$disable-color-dark: lighten(#93a5be, 5%);
+$primary-color-dark: lighten($primary-color, 5%);
+$secondary-color-dark: lighten($secondary-color, 5%);
+$tertiary-color-dark: lighten($tertiary-color, 5%);
+$accent-color-dark: $accent-color;
+$success-color-dark: lighten($success-color, 5%);
+$warning-color-dark: lighten($warning-color, 5%);
+$danger-color-dark: lighten($danger-color, 5%);
+$dark-color-dark: $dark-color;
+$gray-color-dark: lighten($gray-color, 5%);
+$soft-color-dark: lighten($soft-color, 5%);
+$disable-color-dark: lighten($disable-color, 5%);
 
 //* Brand colors *//
 $slack: #611f69;
@@ -87,6 +89,7 @@ $theme-light: map-merge(
     'dark': $dark-color,
     'gray': $gray-color,
     'danger': $danger-color,
+    'accent': $accent-color,
     'disable': $disable-color,
     'success': $success-color,
     'warning': $warning-color,
@@ -103,6 +106,7 @@ $theme-dark: map-merge(
     'dark': $dark-color-dark,
     'gray': $gray-color-dark,
     'danger': $danger-color-dark,
+    'accent': $accent-color-dark,
     'disable': $disable-color-dark,
     'success': $success-color-dark,
     'warning': $warning-color-dark,
@@ -182,7 +186,7 @@ $border-width-md: 0.125rem;
 $border-width-lg: 0.25rem;
 $border-width-xl: 0.375rem;
 $border-color-white: $white;
-$border-color: $soft-color;
+$border-color: #bbc1d33f;
 $border-radius: 0.45rem;
 $border-radius-xl: 1.275rem;
 $border-radius-lg: 0.3rem;
@@ -201,7 +205,7 @@ $transition-collapse: height 0.35s ease;
 $transition-tabs: all 0.2s;
 
 //* Fonts *//
-$font-family-base: 'Mulish', sans-serif;
+$font-family-base: 'Nunito', sans-serif;
 $font-family-headers: 'Montserrat', sans-serif;
 $font-size-base: 1rem;
 $font-size-xxl: ($font-size-base * 2);

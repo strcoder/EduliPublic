@@ -1,5 +1,4 @@
 @import './../../../sass/utils/variables';
-@import './../../../sass/mixins/shadow';
 
 .Toolbar {
   width: 100%;
@@ -10,14 +9,6 @@
   align-items: center;
   justify-content: space-around;
   transition: $transition-theme;
-  &.light {
-    background-color: $primary-color;
-    @include shadow($primary-color);
-  }
-  &.dark {
-    background-color: $tertiary-color;
-    @include shadow($black);
-  }
 }
 
 .Toolbar__nav--logo {

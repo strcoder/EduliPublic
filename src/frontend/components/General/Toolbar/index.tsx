@@ -7,7 +7,7 @@ import './styles.scss';
 const Toolbar = () => {
   const { theme, dispatch } = useStateValue();
   return (
-    <header className={`Toolbar ${theme}`}>
+    <header className='Toolbar bg-tertiary'>
       <nav className='Toolbar__nav'>
         <Link to='/' className='Toolbar__nav--logo'>
           <img src='/logo.png' alt='Eduli-Logotipo' />

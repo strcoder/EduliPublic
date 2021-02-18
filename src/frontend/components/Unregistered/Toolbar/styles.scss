@@ -11,14 +11,6 @@
   justify-content: space-between;
   padding: 0 10px 0 35px;
   transition: $transition-theme;
-  &.light {
-    background-color: $primary-color;
-    @include shadow($primary-color);
-  }
-  &.dark {
-    background-color: $tertiary-color;
-    @include shadow($black);
-  }
 }
 
 .Toolbar__nav {
@@ -56,12 +48,6 @@
   top: 80px;
   left: 0;
   transition: $transition-theme;
-  &.light {
-    background-color: $primary-color;
-  }
-  &.dark {
-    background-color: $tertiary-color;
-  }
 }
 
 .Toolbar__actions--theme {
@@ -128,5 +114,11 @@
   }
   .Toolbar__links a figure {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Toolbar {
+    padding: 0 350px;
   }
 }

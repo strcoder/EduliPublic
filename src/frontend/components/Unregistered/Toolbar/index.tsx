@@ -9,8 +9,12 @@ import './styles.scss';
 const Toolbar = () => {
   const { theme, dispatch } = useStateValue();
   const [navActive, setNavActive] = useState(false);
+  // const [tada, setTada] = useState(false);
+
+  // setInterval(() => { setTada(!tada); }, 3000);
+
   return (
-    <header className={`Toolbar ${theme}`}>
+    <header className='Toolbar bg-tertiary'>
       <nav className='Toolbar__nav fadeIn'>
         <Link to='/' className='Toolbar__nav--logo'>
           <img src='/logo.png' alt='Eduli-Logotipo' />
@@ -68,7 +72,7 @@ const Toolbar = () => {
       </div>
 
       {navActive && (
-        <nav className={`Toolbar__links ${theme} bounceInDown`}>
+        <nav className='Toolbar__links bg-tertiary bounceInDown'>
           <Link to='/' className='btn-link-soft'>
             <span>Home</span>
             <figure>
